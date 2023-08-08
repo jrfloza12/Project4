@@ -27,7 +27,7 @@ There is about 20804 rows of data.
 
 We used Pandas for the dataframe to clean up the data prior to clustering and submitting a model for machine learning.
 From all the data we wanted to identify three unique features "genres, esrb rating and platforms.
-We created three csv files from this set, [csv1](with_ratingvotes.csv) , [csv2](genreonly.csv) , [csv3](with_certificate.csv).
+We created three csv files from this set, [rating](with_ratingvotes.csv) , [genre](genreonly.csv) , [certificate](with_certificate.csv).
 
 [ETL File](Cluster_ETL_2.ipynb)
 
