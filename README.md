@@ -29,7 +29,7 @@ We used Pandas for the dataframe to clean up the data prior to clustering and su
 From all the data we wanted to identify three unique features "genres, esrb rating and platforms.
 We created three csv files from this set, [rating](with_ratingvotes.csv) , [genre](genreonly.csv) , [certificate](with_certificate.csv).
 
-[ETL File](Cluster_ETL_2.ipynb)
+[ETL File](Cluster_ETL.ipynb)
 
 ## Kmeans 
 
@@ -61,7 +61,8 @@ This was the result.
 
 With this dataframe cluster we were now able to create a Kmeans Cluster with scatter design.
 
-![Screenshot 2023-08-06 at 6 56 23 PM](https://github.com/jrfloza12/Project4/assets/122821004/ac39da35-8359-4ba8-a8d3-83887728ad87)
+![Screenshot 2023-08-09 at 6 10 31 PM](https://github.com/jrfloza12/Project4/assets/122821004/2786ddbe-a64f-413a-88e2-2b47e397b502)
+
 
 Our next question was to find out how distributed were the ratings accross the clusters to see if there were any patterns there. 
 The following chart was created to highlight this:
@@ -76,7 +77,8 @@ So we created a distribution on Votes across Clusters.
 Final piece of the cluster process was to see how much of the proportions of Genres are in Each Cluster.
 We used a heatmap for this.
 
-![Screenshot 2023-08-06 at 7 17 55 PM](https://github.com/jrfloza12/Project4/assets/122821004/5c50ff22-63ab-4fb5-baf8-45cbdc252360)
+![Screenshot 2023-08-07 at 8 47 04 PM](https://github.com/jrfloza12/Project4/assets/122821004/e39f22ac-bf57-44e0-bb5e-6a310014c0f3)
+
 
 
 
@@ -133,3 +135,68 @@ Once we determined this we decided to join the two datasets.
 This allowed us to compute the mean of each cluster:
 
 ![Screenshot 2023-08-06 at 8 18 09 PM](https://github.com/jrfloza12/Project4/assets/122821004/ae464cfa-ab80-481a-a738-7ac861aefa30)
+
+Either result produced quite a few clusters. Can we use PCA after the DBSCAN ML process and maybe try to visualize what we have? We pulled in PCA and emulated what we did with the Kmeans notebook.
+
+<img width="872" alt="Screenshot 2023-08-09 at 9 10 45 PM" src="https://github.com/jrfloza12/Project4/assets/122821004/7e773497-3955-47c8-b8aa-6658dfe5a685">
+
+Almost expected. We get a giant blob because we are trying to "smash" 84 clusters into a two-dimensional space. Unlike the Kmeans chart, we don't get a clear picture of all clusters. Nevertheless, what we do see are two things. The purple cluster seems to incorporate most of the "stragglers," and "most" of the data is in that blob in the bottom left of the chart. Those purple stragglers are the -1 Noise.
+
+Nonetheless let's see if we can gain anything from this PCA effort.
+
+Next, we will look at the feature loading. We create a DataFrame to neatly display the loadings for each feature in relation to two principal components. It will give us an idea of how each original feature contributes to the PCA-transformed space. If the absolute value of a feature's loading is close to 1 for a given component, the feature strongly influences that component. If it's close to 0, the feature has little to no influence on that component.
+
+After some more components of PCA coding in the DBSCA file we eventually moved to t-SNE for a better output of the plots
+![Screenshot 2023-08-08 at 6 44 08 PM](https://github.com/jrfloza12/Project4/assets/122821004/1abf31c0-e351-4a21-8d7c-9b8ad644ef83)
+
+
+We will use t-SNE (t-distributed Stochastic Neighbor Embedding), which is really good at dimensionality reduction and well-suited for the visualization of our high-dimensional datasets. That said, we should interpret the results carefully because distances between clusters in the t-SNE plot might not always reflect their relationships in the original high-dimensional space, but it sure makes a pretty chart and shows distinction in our groups. However, it is still hard to tell that there are 84 clusters.
+
+
+<img width="617" alt="Screenshot 2023-08-09 at 9 15 17 PM" src="https://github.com/jrfloza12/Project4/assets/122821004/e9f2230f-0fde-4fae-a4ce-18f4237f8ba2">
+We thought we start with average ratings over the different eras, but this looked too much like normal analysis that didn't require the dataset to be processed through DBSCAN, so we shifted gears.
+
+We then tried to look at the clusters over the years. However, with 84 clusters, a normal graph would not work at all. There was too much color overlap, with different clusters having the same color and a legend that reached the moon.
+
+
+<img width="944" alt="Screenshot 2023-08-09 at 9 16 21 PM" src="https://github.com/jrfloza12/Project4/assets/122821004/03a6750e-95cb-49e4-bc63-0594a2b88758">
+
+Way too messy and hard to read. We will try a couple of different visualization to get the jest of looking at everything.
+
+First, let's take a look at the top 10. This should give us a general sense of where most of our data sits. The chart below makes sense because video games became more prevalent in the mid 80 to now. The data ends in early '22, which is why that is such a small column.
+
+<img width="926" alt="Screenshot 2023-08-09 at 9 17 15 PM" src="https://github.com/jrfloza12/Project4/assets/122821004/3cf69f69-90f5-4019-9056-5b60af5371fa">
+Something else to look at is the most common genre within each cluster. We did not graph this effort.
+
+Even with 84 clusters, Action, and Adventure dominate most of them. This again tells us that the original dataset was also heavily weighted with Action and Adventure.
+
+<img width="933" alt="Screenshot 2023-08-09 at 9 18 21 PM" src="https://github.com/jrfloza12/Project4/assets/122821004/6dea9d36-1ecd-4aaf-8cea-d2ebf05aa725">
+
+Here were the next few cluster groups and the bar charts we were able to showcase:
+<img width="902" alt="Screenshot 2023-08-09 at 9 19 04 PM" src="https://github.com/jrfloza12/Project4/assets/122821004/e3018017-8653-4104-ba70-f9068296c3ae">
+
+
+<img width="930" alt="Screenshot 2023-08-09 at 9 19 40 PM" src="https://github.com/jrfloza12/Project4/assets/122821004/47c7bae5-2780-4b6d-aba4-630ab8c027f2">
+
+<img width="905" alt="Screenshot 2023-08-09 at 9 19 30 PM" src="https://github.com/jrfloza12/Project4/assets/122821004/01401405-839b-44c5-9186-2f3bb8448a44">
+
+<img width="925" alt="Screenshot 2023-08-09 at 9 19 20 PM" src="https://github.com/jrfloza12/Project4/assets/122821004/6e14beae-a51b-4c1c-86b2-6d5ffbd4b431">
+
+Analyzing the data vs noise.
+
+<img width="787" alt="Screenshot 2023-08-09 at 9 22 52 PM" src="https://github.com/jrfloza12/Project4/assets/122821004/5c3bee91-88a4-4470-8dc3-d0670b319a36">
+
+
+
+<img width="967" alt="Screenshot 2023-08-09 at 9 23 43 PM" src="https://github.com/jrfloza12/Project4/assets/122821004/24c8b913-b4ef-4170-846d-9791a25bb260">
+
+Sometimes, outliers or noise can be a result of data entry errors or inconsistencies. For this, we look for games with extremely high or low ratings relative to the number of votes they've received. An empty dataframe as a result indicates that there aren't any games within the noise labeled data that have suspiciously high ratings (greater than 9.5) with very few votes (less than 10)
+
+So DBSCAN did give us different results than KMeans, but as mentioned in the Kmean effort, having the proper context and using the suitable model is extremely important, and being very new to this, we stumbled around the forest at night without a flashlight. We learned many things, a few tricks, and not to take unsupervised ML lightly. We also learned that having the correct data to work with and knowing what types of features you can create with that data makes a big difference.
+
+We did find another dataset that was many times bigger, and if we had more time after learning what we learned from these two rounds of unsupervised ML, we would want to apply our experience to that dataset. A considerable part of any dataset is the ETL process, and this more extensive dataset does require quite a bit more effort in the ETL. One thing we wanted to try was a merge since each dataset came from different websites originally. But our time is up, and this is as far as we got. We thank you for stepping through our process with us, and we hope you learned a thing or two about incorporating unsupervised ML into any future project.
+
+An important note: This was the second half of an effort to use KMean and DBSCAN on a data set. For this to make the most sense, please start with the ETL notebook and then the KMeans.
+
+Thank you for looking through our product.
+
