@@ -1,0 +1,65 @@
+name,year,rating,votes,Action,Adventure,Comedy,Crime,Family,Fantasy,Mystery,Sci-Fi,Thriller,Cluster
+Spider-Man,2018.0,9.2,20759.0,True,True,False,False,False,True,False,False,False,8
+Red Dead Redemption II,2018.0,9.7,35703.0,True,True,False,True,False,False,False,False,False,8
+Grand Theft Auto V,2013.0,9.5,59986.0,True,False,False,True,False,False,False,False,False,8
+God of War,2018.0,9.6,26118.0,True,True,False,False,False,False,False,False,False,8
+Uncharted 4: A Thief's End,2016.0,9.5,28722.0,True,True,False,False,False,False,False,False,False,8
+The Last of Us: Part II,2020.0,8.5,30460.0,True,True,False,False,False,False,False,False,False,8
+The Last of Us,2013.0,9.7,60590.0,True,True,False,False,False,False,False,False,False,8
+Detroit: Become Human,2018.0,9.2,16907.0,True,True,False,False,False,False,False,False,False,8
+Uncharted: Drake's Fortune,2007.0,8.5,20343.0,True,True,False,False,False,True,False,False,False,8
+Batman: Arkham Knight,2015.0,9.0,18970.0,True,True,False,True,False,False,False,False,False,8
+Grand Theft Auto: San Andreas,2004.0,9.4,39629.0,True,False,False,True,False,False,False,False,False,8
+Far Cry 3,2012.0,8.9,18775.0,True,True,False,False,False,False,False,False,False,8
+Star Wars Jedi: Fallen Order,2019.0,8.5,11316.0,True,True,False,False,False,False,False,False,False,8
+Grand Theft Auto: Vice City,2002.0,9.2,26397.0,True,False,False,True,False,False,False,False,False,8
+Uncharted 2: Among Thieves,2009.0,9.4,25048.0,True,True,False,False,False,True,False,False,False,8
+The Witcher 3: Wild Hunt,2015.0,9.7,26083.0,True,True,False,False,False,False,False,False,False,8
+Fallout: New Vegas,2010.0,8.9,12296.0,True,True,False,False,False,False,False,True,False,8
+Horizon Zero Dawn,2017.0,9.0,14234.0,True,True,False,False,False,False,True,False,False,8
+Red Dead Redemption,2010.0,9.5,26627.0,True,True,False,False,False,False,False,False,False,8
+The Elder Scrolls V: Skyrim,2011.0,9.4,29382.0,True,True,False,False,False,True,False,False,False,8
+Fallout 4,2015.0,8.6,12790.0,True,True,False,False,False,False,False,True,False,8
+Grand Theft Auto IV,2008.0,8.9,34553.0,True,False,False,True,False,False,False,False,False,8
+Batman: Arkham City,2011.0,9.4,30763.0,True,True,False,True,False,False,False,False,False,8
+L.A. Noire,2011.0,8.7,15448.0,True,False,False,True,False,False,False,False,False,8
+Batman: Arkham Asylum,2009.0,9.2,27584.0,True,True,False,True,False,False,False,False,False,8
+Assassin's Creed IV: Black Flag,2013.0,8.7,16919.0,True,True,False,False,False,False,False,False,False,8
+Uncharted 3: Drake's Deception,2011.0,9.0,21974.0,True,True,False,False,False,True,False,False,False,8
+Mass Effect,2007.0,9.1,18158.0,True,True,False,False,False,False,False,False,False,8
+Assassin's Creed II,2009.0,9.1,23066.0,True,True,False,False,False,False,False,True,False,8
+Mass Effect 2,2010.0,9.5,19912.0,True,True,False,False,False,False,False,False,False,8
+Tomb Raider,2013.0,8.8,18376.0,True,True,False,False,False,True,False,False,False,8
+Call of Duty: Black Ops,2010.0,8.3,19173.0,True,False,False,False,False,False,False,False,True,8
+Batman: Arkham Origins,2013.0,8.2,13655.0,True,True,False,True,False,False,False,False,False,8
+Mass Effect 3,2012.0,9.1,15572.0,True,True,False,False,False,False,False,True,False,8
+Call of Duty: Modern Warfare 2,2009.0,8.8,23450.0,True,False,False,False,False,False,False,False,True,8
+Minecraft,2009.0,8.5,10880.0,True,True,False,False,True,False,False,False,False,8
+Assassin's Creed III,2012.0,8.0,16911.0,True,True,False,False,False,False,False,False,False,8
+Resident Evil 4,2005.0,9.2,13129.0,True,True,False,False,False,True,False,False,False,8
+Grand Theft Auto III,2001.0,8.7,15703.0,True,False,False,True,False,False,False,False,False,8
+BioShock Infinite,2013.0,9.1,20162.0,True,True,False,False,False,False,False,False,False,8
+BioShock,2007.0,9.1,19731.0,True,True,False,False,False,False,False,False,False,8
+Fallout 3,2008.0,9.1,18904.0,True,True,False,False,False,False,False,True,False,8
+Beyond: Two Souls,2013.0,8.4,11915.0,True,True,False,False,False,False,False,False,False,8
+Call of Duty: Black Ops II,2012.0,8.0,13949.0,True,True,False,False,False,False,False,False,False,8
+Metal Gear Solid,1998.0,9.6,11780.0,True,True,False,False,False,False,False,False,False,8
+The Elder Scrolls IV: Oblivion,2006.0,9.0,12338.0,True,True,False,False,False,True,False,False,False,8
+Assassin's Creed,2007.0,8.0,18642.0,True,True,False,False,False,False,False,True,False,8
+Metal Gear Solid 3: Snake Eater,2004.0,9.5,10445.0,True,True,False,False,False,False,False,False,False,8
+Assassin's Creed: Brotherhood,2010.0,8.7,15573.0,True,True,False,False,False,False,False,False,False,8
+Call of Duty 4: Modern Warfare,2007.0,9.0,22483.0,True,False,False,False,False,False,False,False,True,8
+Half-Life 2,2004.0,9.4,16103.0,True,True,False,False,False,False,False,True,False,8
+Call of Duty: Modern Warfare 3,2011.0,8.1,18044.0,True,False,False,False,False,False,False,False,True,8
+Max Payne,2001.0,9.2,15049.0,True,False,False,True,False,False,False,False,False,8
+Assassin's Creed: Revelations,2011.0,8.3,13102.0,True,True,False,False,False,False,False,False,False,8
+Halo 3,2007.0,8.8,11877.0,True,True,False,False,False,False,False,True,False,8
+Batman Begins,2005.0,8.2,13737.0,True,True,False,True,False,False,False,False,False,8
+The Fifth Element,1998.0,7.6,11904.0,True,True,False,False,False,False,False,True,False,8
+Metal Gear Solid 4: Guns of the Patriots,2008.0,9.4,10612.0,True,True,False,False,False,False,False,False,False,8
+Pirates of the Caribbean: The Legend of Jack Sparrow,2006.0,7.8,11934.0,True,True,False,False,False,True,False,False,False,8
+Portal 2,2011.0,9.4,15609.0,False,True,True,False,False,False,False,True,False,8
+Portal,2007.0,9.1,12784.0,False,True,True,False,False,False,False,True,False,8
+Heavy Rain,2010.0,8.8,13457.0,False,False,False,True,False,False,True,False,False,8
+Until Dawn,2015.0,8.8,14522.0,False,False,False,False,False,False,True,False,True,8
+The Walking Dead,2012.0,9.2,12703.0,False,False,False,False,False,False,False,True,False,8
